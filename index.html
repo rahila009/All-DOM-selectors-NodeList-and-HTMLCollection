@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>dom learning</title>
+
+
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff
+        }
+    </style>
+</head>
+
+<!-- <body class="bg-black">
+    // ******************** All DOM selectors NodeList and HTMLCollection *****************
+      //The Document Object Model (DOM) is a programming interface for web documents.28 -->
+<div>
+    <h1 id="title" class="heading">dom learning <span style="display: none;">test text</span></h1>
+    <p>hi this is dom learning series</p>
+    <h2>Lorem ipsum dolor sit amet consect</h2>
+    <h2>Lorem ipsum dolor sit amet consect</h2>
+    <h2>Lorem ipsum dolor sit amet consect</h2>
+    <input type="password" name="" id="">
+
+    <ul>
+        <li class="list-items">one </li>
+        <li>two</li>
+        <li>three </li>
+    </ul>
+</div>
+</body>
+
+<script>
+    // var myid = document.getElementById('title').id;
+    // var myid = document.getElementById('title').getAttribute('id');
+    // var myid = document.getElementById('title').getAttribute('class');
+    // var myid = document.getElementById('title').className;
+    // var myid = document.getElementById('title').setAttribute('id', 'test');// this line always over writr class k gagay text ajyeh ga
+    // console.log(myid);
+
+    //  const title= document.getElementById('title')
+
+    //    title.style.backgroundColor='green',
+    //    title.style.padding='30px'
+    //    title.style.borderRadius="5px"
+    //    console.log(title)
+
+
+    //// how get content
+
+
+
+    // const titleContent = document.getElementById('title').textContent;
+    // console.log(titleContent);
+
+
+    //    const titleContent = document.getElementById('title').innerHTML
+    // console.log(titleContent)
+
+
+
+    // const titleContent = document.getElementById('title').innerText
+    // console.log(titleContent)
+    // const titleContent = document.getElementsByName('heading')
+    // console.log(titleContent)
+    // const titleContent = document.getElementById('title').innerText //inner text mai juh visible hai woh text only deta hai
+    // console.log(titleContent)
+    //const titleContent = document.getElementById('title').textContent// yeh ap ko sara ka sara content deta hai jsy hum nai
+    //kuch css k propety deh kar hata diya tha woh content bhi deta hai
+    //jsay hum nay  display:none diya tha span ko phir ap ko woh nazar ata hai
+    //console.log(titleContent)
+
+
+    // and what is inner html
+    //is mai sara html value deh ta hai
+    // jitnay bhi hum sy tags use kyeh hai  jitna bhi span use kyeh hai
+    //ya koi styling use ki hai tag k andar woh sara kuch show hota hai
+
+
+
+
+
+
+    //****************************query selector**********************
+
+
+
+    // querySelector in DOM JS allows you to select and retrieve a single HTML element using CSS-style
+    //  selectors, providing a concise and versatile method for element manipulation in web development.
+    //  It supports various selectors for targeting elements based on tag name, class, ID, and more.
+    // const titleContent = document.querySelector('h1')
+    //     console.log(titleContent)
+    //  const titleContent = document.querySelector('#title')
+    //   console.log(titleContent)
+
+    // const titleContent = document.querySelector('.heading')
+    //   console.log(titleContent)
+
+    //   const titleContent = document.querySelector('input[type="password"]')
+    //   console.log(titleContent)
+
+
+    const myul = document.querySelector('ul')
+
+    const myli = myul.querySelector('li');
+     myli.style.backgroundColor="green"
+     myli.style.margin="40px"
+     myli.innerText
+    console.log(myul);
+    console.log(myli);
+
+    // in this query we learn how get individual valu
+
+    //is mai hum img tag ho ya input selct karna ho is k help sy kar skate hai
+
+
+    // now we learn how to get multipul values with thelp of  queryselectorall
+    //******************QUERYSELECTORALL****************
+
+
+    //  const mytext= document.querySelectorAll('li')
+
+
+    //    console.log(mytext)
+
+
+        const myh1 = document.querySelectorAll('h1')
+
+        myh1.forEach((l)=>{
+            l.style.color="blue"
+        })
+       // myh1[0].style.color="green"//=> this is the major difference in  queryslector and querySelectorAll
+
+
+        console.log (myh1)
+
+
+
+
+
+
+
+
+
+
+    // const myh1 = document.getElementsByClassName('list-items')
+
+
+    // Array.from(myh1)
+
+
+    // console.log(myh1)
+
+
+    const myvalues= document.querySelectorAll('h2')  
+     myvalues.style.color="green"
+       console.log(myvalues)
+    const myValues = document.querySelectorAll('h2');
+
+    myValues.forEach(element => {
+        element.style.color = "green";
+    });
+
+
+
+    // const  mypra = document.querySelector('p')
+    // mypra.style.color="blue"
+    //  console.log(mypra)
+
+
+
+
+
+     const  mypra = document.querySelectorAll('p')
+    mypra.forEach((element)=>{
+       element.style.backgroundColor="purple"
+
+    })
+     console.log(mypra)
+
+
+
+
+
+//     // ********************* querySelectorAll***************
+//     Select Multiple Elements: querySelectorAll is a JavaScript method that selects and returns all HTML elements matching a specified CSS selector.
+
+// Returns NodeList: The method returns a NodeList, which is an array-like object, containing all the selected elements.
+
+// Useful for Batch Operations: It is particularly useful when you need to apply operations or modifications to multiple elements on a webpage simultaneousl
+
+
+    // **************querySelector***************
+
+// Select by Type: Use querySelector('element') to grab the first matching HTML element by its type (like 'div' or 'p').
+
+// Target by ID or Class: Add '#' for IDs (e.g., '#myId') or '.' for classes (e.g., '.myClass') to pinpoint specific elements.
+
+// Fine-Tune with Attributes: Refine your selection by including conditions like [attribute="value"] to precisely pick elements based on their attributes.
+
+</script>
+
+
+</html>
